@@ -23,6 +23,14 @@ git checkout main
 git merge sample
 git push origin main
 
+prog 3 addition file:
+
+def add(a,b):
+    return a+b
+def test_add():
+    assert add(1,2) == 3
+    assert add(2,2) == 4
+
 program 3 yaml file:
 
 
