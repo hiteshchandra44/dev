@@ -117,3 +117,12 @@ docker build .
 docker run [docker_id]
 docker build -t hitesh/redis:latest .
 docker run hitesh/redis
+
+prog 6 commamds:
+
+sonar.projectName=lab6
+sonar.projectKey=lab6
+sonar.projectVersion=1.0
+sonar.language=java
+sonar.sources=src/main/java
+sonar.tests=src/test/java
