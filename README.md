@@ -126,3 +126,30 @@ sonar.projectVersion=1.0
 sonar.language=java
 sonar.sources=src/main/java
 sonar.tests=src/test/java
+
+name: First GitHub Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setting up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Installing all the dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest
+      - name: Running tests
+        run: |
+          python -m pytest addition.py
+
